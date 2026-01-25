@@ -55,7 +55,6 @@ A simple list of tools with some significance. Newer ones under exploration in *
 ### Summary points
 - MSYS2 is the most important
 - WinGet can be hit-or-miss
-- `uv` is the cool new shiny thing to explore
 - There are many ways to get Python
   - Go for the embeddable package unless external libraries are required
 - Must-haves:
@@ -64,6 +63,10 @@ A simple list of tools with some significance. Newer ones under exploration in *
   - Git (and GitHub CLI unless good with SSH keys)
 - Gaps
   - Databases and SQL
+- (Shiny, new) Things to explore
+  - `uv`
+  - `DuckDB`
+  - `marimo`
 
 
 ## Setup instructions
@@ -106,6 +109,28 @@ Moving forward, `uv` will likely become the preferred Python dependency manageme
 ```
 
 
+### Python embeddable package
+
+Consider this if external libraries are not required, or if using over a network. If external libraries are required after all, there are ways around it.
+
+#### `pip.pyz`
+
+> Not recommended for production, but should be fine if just needing to build an environment. Will save 800+ files compared to below.
+
+```bash
+curl -sSL https://bootstrap.pypa.io/pip/pip.pyz -o pip.pyz
+python pip.pyz install ...
+```
+
+#### `get-pip.py`
+
+```bash
+curl -sSL https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
+python -m pip install ...
+```
+
+
 ### Git
 
 > If you forgot about configuration, you will be reminded eventually.
@@ -137,6 +162,14 @@ Host servername
 
 # https://docs.github.com/en/authentication/connecting-to-github-with-ssh
 ```
+
+
+### RStudio
+
+- A past version(s) of RStudio was unable to locate the executable and refused to work
+- The remedy was to edit `%USERPROFILE%\AppData\Roaming\RStudio\config.json`
+  - Under platform > windows > rExecutablePath
+  - Set `C:/.../R-x.x.x/bin/x64/Rterm.exe` (use forward slashes or double back slashes)
 
 
 ### Micromamba
