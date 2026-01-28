@@ -69,7 +69,10 @@ A simple list of tools with some significance. Newer ones under exploration in *
   - `marimo`
 
 
-## Setup instructions
+## ~~Setup~~ Config instructions
+
+Getting the apps to work on the machine will be left to official documentations. There might be multiple ways to do so, and the best choice might depend on the situation. So "config instructions" would be a more accurate description of this section. 
+
 
 ### MSYS2
 
@@ -105,7 +108,9 @@ pacman -S mingw-w64-ucrt-x86_64-duckdb mingw-w64-ucrt-x86_64-imagemagick mingw-w
 Moving forward, `uv` will likely become the preferred Python dependency management tool. It will not completely replace `mamba` or `micromamba`, especially where non-Python dependencies are involved.
 
 ```bash
-# Will need to study more
+# Universal environment(s) might not be the intent of `uv`, but while we're transitioning away from `mamba`...
+uv venv --relocatable
+uv add duckdb fastexcel marimo[sql] polars[pyarrow] ty xlsxwriter
 ```
 
 
