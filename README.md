@@ -92,7 +92,7 @@ pacman -Syu
 pacman -S git mingw-w64-ucrt-x86_64-github-cli mingw-w64-ucrt-x86_64-rclone rsync vim
 
 # Optional
-pacman -S make mingw-w64-ucrt-x86_64-python-uv tree
+pacman -S make mingw-w64-ucrt-x86_64-nodejs mingw-w64-ucrt-x86_64-python-uv tree
 
 # Extras
 pacman -S mingw-w64-ucrt-x86_64-duckdb mingw-w64-ucrt-x86_64-imagemagick mingw-w64-ucrt-x86_64-pngquant mingw-w64-ucrt-x86_64-poppler
