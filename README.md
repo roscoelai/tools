@@ -110,7 +110,7 @@ Moving forward, `uv` will likely become the preferred Python dependency manageme
 ```bash
 # Universal environment(s) might not be the intent of `uv`, but while we're transitioning away from `mamba`...
 uv venv --relocatable
-uv add duckdb fastexcel marimo[sql] polars[pyarrow] ty xlsxwriter
+uv add altair duckdb fastexcel marimo[sql] polars[pyarrow] ty xlsxwriter
 ```
 
 
